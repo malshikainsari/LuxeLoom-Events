@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { PieChart, Pie, Cell, Tooltip } from "recharts";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
-import { CgProfile } from "react-icons/cg";
+import Header from "../components/Header";
 
 const BudgetTracker = () => {
   const [expenses, setExpenses] = useState([]);
@@ -51,22 +51,8 @@ const BudgetTracker = () => {
 
   return (
     <div className="w-full h-[850px] bg-[#F5F5DC] p-10 flex flex-col">
-      {/* Navigation */}
-      <nav className="flex justify-between items-center pb-6 relative">
-        <h1 className="text-black text-2xl font-bold absolute top-[7%] left-[2%]">LOGO</h1>
-        <div className="space-x-8 text-lg">
-          <a href="#" className="text-gray-800 hover:text-[#C78141] font-bold absolute left-[20%]">
-            EVENT THEME GENERATOR
-          </a>
-          <a href="http://localhost:5173/vendor" className="text-gray-800 hover:text-[#C78141] font-bold absolute left-[45%]">
-            VENDOR MARKETPLACE
-          </a>
-          <a href="#" className="text-[#C78141] hover:text-black font-bold absolute left-[69%]">
-            BUDGET TRACKER
-          </a>
-        </div>
-        <CgProfile className="absolute right-[2%] top-[7%] text-3xl text-black hover:text-[#B43B26] cursor-pointer" />
-      </nav>
+      {/* Navigation - Replaced with Header component */}
+      <Header activePage="budgettracker" />
 
       <h1 className="text-3xl font-bold text-[#FF4500] text-center mt-12">Budget Tracker</h1>
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CgProfile } from "react-icons/cg";
+import Header from "../components/Header";
 
 const VendorMarketplace = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -59,17 +60,9 @@ const VendorMarketplace = () => {
     : vendors;
 
   return (
-    <div className="w-full h-auto bg-[#F5F5DC] p-10 flex flex-col items-center">
-      {/* Navigation */}
-      <nav className="flex justify-between items-center pb-6 relative w-full">
-        <h1 className="text-black text-2xl font-bold absolute top-[7%] left-[2%]">LOGO</h1>
-        <div className="space-x-8 text-lg">
-          <a href="http://localhost:5173/themegenerator" className="text-gray-800 hover:text-[#C78141] font-bold absolute left-[20%]">EVENT THEME GENERATOR</a>
-          <a href="#" className="text-[#C78141] hover:text-black font-bold absolute left-[45%]">VENDOR MARKETPLACE</a>
-          <a href="#" className="text-gray-800 hover:text-[#C78141] font-bold absolute left-[69%]">BUDGET TRACKER</a>
-        </div>
-        <CgProfile className="absolute right-[2%] top-[7%] text-3xl text-black hover:text-[#B43B26] cursor-pointer" />
-      </nav>
+    <div className="w-full h-[850px] bg-[#F5F5DC] p-10 flex flex-col">
+      {/* Navigation - Replaced with Header component */}
+      <Header activePage="vendor" />
 
       {/* Page Title */}
       <h1 className="text-3xl font-bold text-[#FF4500] ml-6 mt-12">Vendor Marketplace</h1>
