@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CgProfile } from "react-icons/cg";
-import Header from "../components/Header";
+import Header from "../components/Header"; 
 
 const VendorMarketplace = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -62,21 +62,24 @@ const VendorMarketplace = () => {
   return (
     <div className="w-full h-[850px] bg-[#F5F5DC] p-10 flex flex-col">
       {/* Navigation - Replaced with Header component */}
-      <Header activePage="vendor" />
+      <Header activePage="themegenerator" />
 
-      {/* Page Title */}
-      <h1 className="text-3xl font-bold text-[#FF4500] ml-6 mt-12">Vendor Marketplace</h1>
-      
-      {/* Search Bar */}
-      <div className="mt-8 flex items-center w-[50%] bg-white p-2 rounded-lg shadow-md ml-6">
-        <input 
-          type="text" 
-          placeholder="Search vendors..." 
-          className="w-full text-lg outline-none" 
-          value={searchQuery} 
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-      </div>
+      {/* Page Title and Search Container */}
+<div className="flex flex-col items-center w-full">
+  {/* Page Title - now centered */}
+  <h1 className="text-3xl font-bold text-[#FF4500] mt-12">Vendor Marketplace</h1>
+  
+  {/* Search Bar - now centered */}
+  <div className="mt-8 flex items-center w-[50%] bg-white p-2 rounded-lg shadow-md">
+    <input 
+      type="text" 
+      placeholder="Search vendors..." 
+      className="w-full text-lg outline-none" 
+      value={searchQuery} 
+      onChange={(e) => setSearchQuery(e.target.value)}
+    />
+  </div>
+</div>
       
       {/* Vendor Categories */}
       <div className="mt-10 flex justify-center space-x-6 w-full">
