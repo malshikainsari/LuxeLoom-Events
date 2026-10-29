@@ -7,6 +7,8 @@ dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 require("dotenv").config();
 
+console.log("PROJECT_ID:", process.env.FIREBASE_PROJECT_ID);
+
 const authRoutes = require("./routes/authRoutes");
 const vendorRoutes = require("./routes/vendorRoutes");
 const budgetRoutes = require("./routes/budgetRoutes");
